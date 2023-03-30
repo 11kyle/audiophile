@@ -1,0 +1,78 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+type ProductsCategoryImage {
+  desktop String
+  mobile  String
+  tablet  String
+}
+
+type ProductsGallery {
+  first  ProductsGalleryFirst
+  second ProductsGallerySecond
+  third  ProductsGalleryThird
+}
+
+type ProductsGalleryFirst {
+  desktop String
+  mobile  String
+  tablet  String
+}
+
+type ProductsGallerySecond {
+  desktop String
+  mobile  String
+  tablet  String
+}
+
+type ProductsGalleryThird {
+  desktop String
+  mobile  String
+  tablet  String
+}
+
+type ProductsImage {
+  desktop String
+  mobile  String
+  tablet  String
+}
+
+type ProductsIncludes {
+  item     String
+  quantity Int
+}
+
+type ProductsOthers {
+  image ProductsOthersImage
+  name  String
+  slug  String
+}
+
+type ProductsOthersImage {
+  desktop String
+  mobile  String
+  tablet  String
+}
+
+model Products {
+  id            String                @id @default(auto()) @map("_id") @db.ObjectId
+  category      String
+  categoryImage ProductsCategoryImage
+  description   String
+  features      String
+  gallery       ProductsGallery
+  id_           Int                   @map("id")
+  image         ProductsImage
+  includes      ProductsIncludes[]
+  name          String
+  new           Boolean
+  others        ProductsOthers[]
+  price         Int
+  slug          String
+}
