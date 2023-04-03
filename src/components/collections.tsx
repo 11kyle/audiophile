@@ -30,7 +30,7 @@ export default function Collections() {
     <section aria-labelledby="collections-heading">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto pb-16 sm:pb-24 lg:max-w-none lg:pb-32">
-          <h2 id="collections-heading" className="text-2xl font-bold text-gray-900">
+          <h2 id="collections-heading" className="text-xl font-bold text-gray-900">
             Collections
           </h2>
 

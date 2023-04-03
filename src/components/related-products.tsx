@@ -2,30 +2,22 @@ import Image from "next/image"
 import Link from "next/link"
 
 type Props = {
-  products: [
-    {
-      slug: string
-      name: string
-      image: {
-        desktop: string
-        tablet: string
-        mobile: string
-      }
-    }
-  ]
+  products: Product[]  
+}
+
+type Product = {
+  slug: string
+  name: string
+  image: {
+    desktop: string
+    tablet: string
+    mobile: string
+  }
 }
 
 export default function RelatedProducts({ products }: Props) {
   // if product slug contains category
-  function getHref(product: {
-    slug: string
-    name: string
-    image: {
-      desktop: string
-      tablet: string
-      mobile: string
-    }
-  }) {
+  function getHref(product: Product) {
     let href: string = ""
 
     if (product) {

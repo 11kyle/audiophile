@@ -1,36 +1,5 @@
 import Image from "next/image"
 
-/*
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
-*/
-const features = [
-  {
-    name: 'Durable',
-    description: 'The leather cover and machined steel disc binding stand up to daily use for years to come.',
-  },
-  {
-    name: 'Refillable',
-    description: 'Buy it once and refill as often as you need. Subscribe and save on routine refills.',
-  },
-  {
-    name: 'Thoughtfully designed',
-    description:
-      'The comfortable disc binding allows you to quickly rearrange pages or combine lined, graph, and blank refills.',
-  },
-  { name: 'Locally made', description: 'Responsibly and sustainably made real close to wherever you are, somehow.' },
-]
-
 export default function SplitDetails() {
   return (
     <div className="bg-white">
@@ -62,25 +31,15 @@ export default function SplitDetails() {
 
         <div className="mx-auto max-w-2xl px-4 pb-24 pt-16 sm:px-6 sm:pb-32 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:pt-32">
           <div className="lg:col-start-2">
-            <h2 id="features-heading" className="font-medium text-gray-500">
-              Leatherbound Daily Journal
+            <h2 id="features-heading" className="mt-4 text-4xl font-bold tracking-tight text-gray-900">
+              Bringing you the best audio gear
             </h2>
-            <p className="mt-4 text-4xl font-bold tracking-tight text-gray-900">Bringing you the best audio gear</p>
             <p className="mt-4 text-gray-500">
             Located at the heart of New York City, Audiophile is the premier store for high end headphones, earphones, 
             speakers, and audio accessories. We have a large showroom and luxury demonstration rooms available for you 
             to browse and experience a wide range of our products. Stop by our store to meet some of the fantastic people 
             who make Audiophile the best place to buy your portable audio equipment.
             </p>
-
-            {/* <dl className="mt-10 grid grid-cols-1 gap-x-8 gap-y-10 text-sm sm:grid-cols-2">
-              {features.map((feature) => (
-                <div key={feature.name}>
-                  <dt className="font-medium text-gray-900">{feature.name}</dt>
-                  <dd className="mt-2 text-gray-500">{feature.description}</dd>
-                </div>
-              ))}
-            </dl> */}
           </div>
         </div>
       </section>
