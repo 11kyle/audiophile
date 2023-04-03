@@ -3,19 +3,10 @@ import Image from "next/image"
 import Hero from "@/components/hero"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
-import Products from "@/components/products"
-import { PrismaClient } from "@prisma/client"
+import SplitDetails from "@/components/split-details"
+import Layout from "@/components/layouts/layout"
 
-export async function getStaticProps() {
-  const prisma = new PrismaClient()
-  const products = await prisma.products.findMany()
-
-  return {
-    props: { products },
-  }
-}
-
-export default function Home({ products }) {
+export default function Home() {
   return (
     <>
       <Head>
@@ -25,9 +16,13 @@ export default function Home({ products }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* <Navbar /> */}
-      <Hero />
-      {products && <Products products={products} />}
-      <Footer />
+      {/* <Hero /> */}
+      {/* <div className="max-w-[1110px] mx-auto"> */}
+      {/* <SplitDetails /> */}
+      {/* </div> */}
+      {/* <Footer /> */}
+      <Layout>
+      </Layout>
     </>
   )
 }

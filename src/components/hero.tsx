@@ -2,20 +2,21 @@ import { useState } from "react"
 import { Dialog } from "@headlessui/react"
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 import Image from "next/image"
+import Link from "next/link"
 
 const navigation = [
-  { name: "Home", href: "#" },
-  { name: "Headphones", href: "#" },
-  { name: "Speakers", href: "#" },
-  { name: "Earphones", href: "#" },
+  { name: "Home", href: "/" },
+  { name: "Headphones", href: "/headphones" },
+  { name: "Speakers", href: "/speakers" },
+  { name: "Earphones", href: "/earphones" },
 ]
 
 export default function Hero() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <div className="bg-gray-900">
-      <header className="absolute inset-x-0 top-0 z-50">
+    <div className="bg-black">
+      {/* <header className="absolute inset-x-0 top-0 z-50">
         <nav
           className="flex items-center justify-between p-6 lg:px-8"
           aria-label="Global"
@@ -46,13 +47,13 @@ export default function Hero() {
 
           <div className="hidden lg:flex lg:gap-x-12">
             {navigation.map((item) => (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
                 className="text-sm font-semibold leading-6 text-white"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -99,13 +100,13 @@ export default function Hero() {
               <div className="-my-6 divide-y divide-gray-500/25">
                 <div className="space-y-2 py-6">
                   {navigation.map((item) => (
-                    <a
+                    <Link
                       key={item.name}
                       href={item.href}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-800"
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
                 <div className="py-6">
@@ -120,9 +121,9 @@ export default function Hero() {
             </div>
           </Dialog.Panel>
         </Dialog>
-      </header>
+      </header> */}
 
-      <div className="relative isolate overflow-hidden pt-14">
+      <div className="relative isolate overflow-hidden">
         <picture>
           <source
             media="(min-width: 1024px)"
@@ -136,12 +137,13 @@ export default function Hero() {
             src="/home/mobile/image-header.jpg"
             alt=""
             fill={true}
+            priority
             className="absolute inset-0 -z-10 h-full w-full object-cover"
           />
         </picture>
 
         <div className="max-w-[1110px] mx-4 sm:mx-auto">
-          <div className="mx-auto lg:mx-0 max-w-md py-44 sm:py-48 lg:py-56">
+          <div className="mx-auto lg:mx-0 max-w-md lg:px-8 py-44 sm:py-48 lg:py-56">
             <div className="mb-4 flex justify-center lg:justify-start">
               <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-400 ring-1 ring-white/10 hover:ring-white/20">
                 New Product
@@ -156,12 +158,12 @@ export default function Hero() {
                 made for the passionate music enthusiast.
               </p>
               <div className="mt-10 flex items-center justify-center lg:justify-start gap-x-6">
-                <a
+                <Link
                   href="#"
                   className="text-sm font-semibold leading-6 text-white"
                 >
                   See product <span aria-hidden="true">→</span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

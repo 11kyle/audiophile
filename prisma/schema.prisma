@@ -67,12 +67,11 @@ model Products {
   description   String
   features      String
   gallery       ProductsGallery
-  id_           Int                   @map("id")
   image         ProductsImage
   includes      ProductsIncludes[]
   name          String
   new           Boolean
   others        ProductsOthers[]
   price         Int
-  slug          String
+  slug          String                @unique
 }
