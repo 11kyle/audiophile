@@ -1,10 +1,7 @@
-import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 
 export default function Hero() {
-  // const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-
   return (
     <div className="bg-[#191919]">
       <div className="relative isolate overflow-hidden">
@@ -29,12 +26,12 @@ export default function Hero() {
         <div className="max-w-[1110px] mx-4 sm:mx-auto">
           <div className="mx-auto lg:mx-0 max-w-md lg:px-8 py-44 sm:py-48 lg:py-56">
             <div className="mb-4 flex justify-center lg:justify-start">
-              <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-400 ring-1 ring-white/10 hover:ring-white/20">
+              <div className="relative rounded-full px-3 py-1 uppercase text-sm leading-6 tracking-[10px] text-gray-400 ring-1 ring-white/10 hover:ring-white/20">
                 New Product
               </div>
             </div>
             <div className="text-center lg:text-left">
-              <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+              <h1 className="uppercase text-4xl font-bold tracking-tight text-white sm:text-6xl">
                 XX99 Mark II Headphones
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -44,7 +41,7 @@ export default function Hero() {
               <div className="mt-10 flex items-center justify-center lg:justify-start gap-x-6">
                 <Link
                   href="#"
-                  className="text-sm font-semibold leading-6 text-white"
+                  className="text-sm font-semibold leading-6 text-orange-500 hover:text-orange-300"
                 >
                   See product <span aria-hidden="true">→</span>
                 </Link>

@@ -1,10 +1,6 @@
 import Head from "next/head"
-import Image from "next/image"
-import Hero from "@/components/hero"
-import Navbar from "@/components/navbar"
-import Footer from "@/components/footer"
-import SplitDetails from "@/components/split-details"
 import Layout from "@/components/layouts/layout"
+import FeaturedProducts from "@/components/featured-products"
 
 export default function Home() {
   return (
@@ -15,13 +11,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <Navbar /> */}
-      {/* <Hero /> */}
-      {/* <div className="max-w-[1110px] mx-auto"> */}
-      {/* <SplitDetails /> */}
-      {/* </div> */}
-      {/* <Footer /> */}
       <Layout>
+        <FeaturedProducts />
       </Layout>
     </>
   )

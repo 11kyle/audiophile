@@ -77,21 +77,4 @@ interface ProductAction {
   quantity?: number;
 }
 
-const initialProducts: Product[] = [
-  {
-    id: '1',
-    name: 'Throwback Hip Bag',
-    price: 90,
-    imgSrc: '/product-zx9-speaker/mobile/image-product.jpg',
-    imgAlt: 'Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.',
-    quantity: 1,
-  },
-  {
-    id: '2',
-    name: 'Throwback Hip Bag',
-    price: 90,
-    imgSrc: '/product-zx9-speaker/mobile/image-product.jpg',
-    imgAlt: 'Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.',
-    quantity: 1,
-  },
-]
+const initialProducts: Product[] = []

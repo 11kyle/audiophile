@@ -4,31 +4,6 @@ import { Dialog, Transition } from '@headlessui/react'
 import { ChevronLeftIcon, ChevronRightIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { ShoppingCartContext } from '@/lib/shopping-cart-context'
 
-const products = [
-  {
-    id: 1,
-    name: 'Throwback Hip Bag',
-    href: '#',
-    color: 'Salmon',
-    price: '$90.00',
-    quantity: 1,
-    imageSrc: '/product-zx9-speaker/mobile/image-product.jpg',
-    imageAlt: 'Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.',
-  },
-  {
-    id: 2,
-    name: 'Medium Stuff Satchel',
-    href: '#',
-    color: 'Blue',
-    price: '$32.00',
-    quantity: 1,
-    imageSrc: '/product-yx1-earphones/mobile/image-product.jpg',
-    imageAlt:
-      'Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.',
-  },
-  // More products...
-]
-
 type Props = {
   open: boolean
   setOpen: React.Dispatch<React.SetStateAction<boolean>>
@@ -85,33 +60,26 @@ export default function ShoppingCart({ open, setOpen }: Props) {
                       <div className="mt-8">
                         <div className="flow-root">
                           <ul role="list" className="-my-6 divide-y divide-gray-200">
-                            {shoppingCartProducts?.map((product, index) => (
-                              <li key={index}>{product.name}</li>
-                            ))}
-                            {products.map((product) => (
+                            {shoppingCartProducts?.map((product) => (
                               <li key={product.id} className="flex py-6">
                                 <div className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
                                   <Image 
-                                    src={product.imageSrc}
-                                    alt={product.imageAlt}
+                                    src={product.imgSrc}
+                                    alt={product.imgAlt}
                                     fill
                                     className="w-full h-full object-cover object-center"
                                   />
                                 </div>
-
                                 <div className="ml-4 flex flex-1 flex-col">
                                   <div>
                                     <div className="flex justify-between text-base font-medium text-gray-900">
                                       <h3>
-                                        <a href={product.href}>{product.name}</a>
+                                        <a href="#">{product.name}</a>
                                       </h3>
-                                      <p className="ml-4">{product.price}</p>
+                                      <p className="ml-4">${product.price * product.quantity}.00</p>
                                     </div>
                                   </div>
                                   <div className="flex flex-1 items-end justify-between text-sm">
-                  
-
-
                                     <span className="isolate inline-flex rounded-md">
                                       <button
                                         type="button"
@@ -129,8 +97,6 @@ export default function ShoppingCart({ open, setOpen }: Props) {
                                         <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
                                       </button>
                                     </span>
-
-
                                     <div className="flex">
                                       <button
                                         type="button"

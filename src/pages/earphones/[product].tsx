@@ -30,11 +30,11 @@ export const getStaticProps: GetStaticProps = async (context) => {
 export default function EarphoneProductPage({ product }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
-      <ShoppingCartProvider>
+      {/* <ShoppingCartProvider> */}
         <ProductLayout>
           <Product product={product} />
         </ProductLayout>
-      </ShoppingCartProvider>
+      {/* </ShoppingCartProvider> */}
     </>
   )
 }
